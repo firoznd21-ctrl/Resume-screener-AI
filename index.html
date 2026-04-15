@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Screener AI</title>
+</head>
+<body style="font-family: Arial; text-align:center; margin-top:50px;">
+
+    <h1>Resume Screener AI 🤖</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <textarea name="job_desc" rows="10" cols="50" placeholder="Enter Job Description"></textarea><br><br>
+
+        <input type="file" name="resume" required><br><br>
+
+        <button type="submit">Check Match</button>
+    </form>
+
+    {% if score %}
+        <h2>Match Score: {{score}}%</h2>
+    {% endif %}
+
+</body>
+</html>
